@@ -113,6 +113,19 @@
     position: relative;
     cursor: pointer;
 }
+.whats__chat-img {
+    position: relative;
+}
+.whats__chat-img .here1 {
+    position: absolute;
+    background-color: green;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 26px;
+    left: 26px;
+    border: 2px solid white;
+}
 .whats__chat img {
     display: block;
     width: 40px;
@@ -203,6 +216,21 @@
     border-radius: 5px;
     padding: 0 10px;
     margin: 3px 0;
+}
+.person {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    height: 25px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin: 3px 0;
+}
+.person__block {
+    display: flex;
+    justify-content: end;
 }
 .chat__text {
     padding: 3px;

@@ -36,3 +36,6 @@ h1 {
     transition: 0.3s;
     transform: translateX(-384px) !important;
 }
+.green {
+    color: rgb(87, 224, 87) !important;
+}
