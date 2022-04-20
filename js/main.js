@@ -211,20 +211,45 @@ function writeSomeone () {
         `
         msgAmount()
         last_tap()
-        send.addEventListener('click', function(){
+        function bot1() {
             if(hi.test(input)){
-                setTimeout(last_tap, 3 * 1000)
+                setTimeout(last_tap, 4 * 1000)
                 setTimeout(wasTime, 15 * 1000)
             } else if (yes.test(input)){
+                send.removeEventListener('click', bot1)
                 setTimeout(last_tap, 3 * 1000)
-                
+                setTimeout(tap, 4 * 1000)
+                setTimeout(ms1_1, 12 * 1000)
+            } else {
+                setTimeout(wasTime, 15 * 1000)
             }
-
-        })
+        }
+        send.addEventListener('click', bot1)
     }
-    setTimeout(ms1, 4 * 1000)
 
-    setTimeout(wasTime, 15 * 1000)
+    function ms1_1 () {
+        last_tap()
+        document.querySelector('.chat__body').innerHTML += `
+            <p class="msg msg1 msg__tap1">Меня зовут Dryjorse, а тебя?</p>
+        `
+        msgAmount()
+        last_tap()
+        function bot_name(){
+            setTimeout(last_tap, 3 * 1000)
+            setTimeout(tap, 4 * 1000)
+            setTimeout(function(){
+                send.removeEventListener('click', bot_name)
+                document.querySelector('.chat__body').innerHTML += `
+                    <p class="msg msg1 msg__tap1">Рад знакомству ${input}!</p>
+                `
+                msgAmount()
+                last_tap()
+            }, 11 * 1000)
+        }
+        send.addEventListener('click', bot_name)
+    }
+
+    setTimeout(ms1, 4 * 1000)
 }
 setTimeout(writeSomeone, 1 * 1000)
 
